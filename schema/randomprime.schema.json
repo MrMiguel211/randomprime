@@ -4600,6 +4600,131 @@
                         "additionalProperties": false
                     }
                 },
+                "sounds": {
+                    "description": "Add Sound objects to this room.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/$defs/addModifyId"
+                            },
+                            "layer": {
+                                "$ref": "#/$defs/addModifyLayer"
+                            },
+                            "position": {
+                                "description": "The origin of the sound.",
+                                "$ref": "#/$defs/vector3",
+                                "default": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            },
+                            "rotation": {
+                                "description": "The rotation of the sound",
+                                "$ref": "#/$defs/vector3",
+                                "default": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            },
+                            "soundID": {
+                                "description": "Specify the ID of the sound. Use PWE to find your desired sound.",
+                                "type": "integer",
+                                "minimum": -1,
+                                "default": -1,
+                                "maximum": 65535
+                            },
+                            "active": {
+                                "description": "Default active state of the sound.",
+                                "type": "boolean",
+                                "default": true
+                            },
+                            "maxDistance": {
+                                "description": "Specify how far the sound reaches before it's inaudible.",
+                                "type": "number",
+                                "default": 50.0,
+                                "exclusiveMinimum": 0.0
+                            },
+                            "startDelay": {
+                                "description": "Delay before the sound plays.",
+                                "type": "number",
+                                "default": 0.0,
+                                "exclusiveMinimum": 0.0
+                            },
+                            "minVolume": {
+                                "type": "number",
+                                "default": 20.0,
+                                "exclusiveMinimum": 0.0
+                            },
+                            "volume": {
+                                "type": "integer",
+                                "default": 127,
+                                "minimum": 0,
+                                "maximum": 127,
+                                "description": "Volume of the sound."
+                            },
+                            "priority": {
+                                "type": "integer",
+                                "default": 127,
+                                "minimum": 0,
+                                "maximum": 127
+                            },
+                            "pan": {
+                                "type": "integer",
+                                "default": 64,
+                                "minimum": -2147483647,
+                                "maximum": 2147483647
+                            },
+                            "looping": {
+                                "description": "The sound will loop forever if true.",
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "nonEmitter": {
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "autoStart": {
+                                "description": "The sound will play immediately upon room load if true.",
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "occlusionTest": {
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "acoustics": {
+                                "description": "The sound will use room acoustics if true.",
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "world_sfx": {
+                                "description": "The sound will always be audible regardless of origin (Example: Exterior Docking Hangar ambiance sound).",
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "allow_duplicates": {
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "pitch": {
+                                "type": "integer",
+                                "default": 0,
+                                "minimum": -2147483647,
+                                "maximum": 2147483647
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "soundID",
+                            "volume"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
                 "playerActors": {
                     "description": "Add playerActors to this room. The animation used is the one of Samus riding an elevator. I was too lazy to add all the dependencies to the room, so the game may stutter substantially when loading a room with one of these.",
                     "type": "array",

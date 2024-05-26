@@ -746,6 +746,35 @@ pub struct ControllerActionConfig {
     pub one_shot: Option<bool>,
 }
 
+#[derive(Serialize, Deserialize, Debug, Clone)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct SoundConfig {
+    pub id: u32,
+    pub layer: Option<u32>,
+    
+    pub position: Option<[f32; 3]>,
+    pub rotation: Option<[f32; 3]>,
+
+    pub sound_id: u16,
+
+    pub active: Option<bool>,
+    pub max_dist: Option<f32>,
+    pub dist_comp: Option<f32>,
+    pub start_delay: Option<f32>,
+    pub min_volume: Option<u32>,
+    pub volume: Option<u32>,
+    pub priority: Option<u32>,
+    pub pan: Option<u32>,
+    pub loops: Option<bool>,
+    pub non_emitter: Option<bool>,
+    pub auto_start: Option<bool>,
+    pub occlusion_test: Option<bool>,
+    pub acoustics: Option<bool>,
+    pub world_sfx: Option<bool>,
+    pub allow_duplicates: Option<bool>,
+    pub pitch: Option<u32>,
+}
+
 #[allow(non_camel_case_types)]
 #[derive(Debug, Serialize, Deserialize, Copy, Clone, Eq, PartialEq)]
 #[repr(u32)]
@@ -958,6 +987,7 @@ pub struct RoomConfig {
     pub controller_actions: Option<Vec<ControllerActionConfig>>,
     pub player_actors: Option<Vec<PlayerActorConfig>>,
     pub world_light_faders: Option<Vec<WorldLightFaderConfig>>,
+    pub sounds: Option<Vec<SoundConfig>>,
     // Don't forget to update merge_json when adding here
 }
 

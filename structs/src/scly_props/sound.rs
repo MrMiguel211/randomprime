@@ -7,14 +7,12 @@ use crate::SclyPropertyData;
 #[derive(Debug, Clone)]
 pub struct Sound<'r> {
     #[auto_struct(expect = 20)]
-    prop_count: u32,
+    pub prop_count: u32,
 
     pub name: CStr<'r>,
-
     pub position: GenericArray<f32, U3>,
     pub rotation: GenericArray<f32, U3>,
-    pub sound_id: u32,
-
+    pub sound_id: u16,
     pub active: u8,
     pub max_dist: f32,
     pub dist_comp: f32,
