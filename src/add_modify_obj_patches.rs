@@ -1755,7 +1755,7 @@ pub fn patch_add_sound(
         ($obj:expr) => {
             let property_data = $obj.property_data.as_sound_mut().unwrap();
 
-            property_data.sound_id = sound_id as u16;
+            property_data.sound_id = config.sound_id as u16;
 
             if let Some(position) = config.position {
                 property_data.position = position.into()

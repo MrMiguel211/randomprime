@@ -4630,7 +4630,7 @@
                                     0.0
                                 ]
                             },
-                            "soundID": {
+                            "soundId": {
                                 "description": "Specify the ID of the sound. Use PWE to find your desired sound.",
                                 "type": "integer",
                                 "minimum": -1,
@@ -4678,7 +4678,7 @@
                                 "minimum": -2147483647,
                                 "maximum": 2147483647
                             },
-                            "looping": {
+                            "loops": {
                                 "description": "The sound will loop forever if true.",
                                 "type": "boolean",
                                 "default": false
@@ -4701,7 +4701,7 @@
                                 "type": "boolean",
                                 "default": false
                             },
-                            "world_sfx": {
+                            "worldSfx": {
                                 "description": "The sound will always be audible regardless of origin (Example: Exterior Docking Hangar ambiance sound).",
                                 "type": "boolean",
                                 "default": false
@@ -4719,7 +4719,7 @@
                         },
                         "required": [
                             "id",
-                            "soundID",
+                            "soundId",
                             "volume"
                         ],
                         "additionalProperties": false
