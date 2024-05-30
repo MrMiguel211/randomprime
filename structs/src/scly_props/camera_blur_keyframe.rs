@@ -11,7 +11,11 @@ pub struct CameraBlurKeyframe<'r> {
 
     pub name: CStr<'r>,
     pub active: u8,
-    pub unknowns: GenericArray<u8, U5>,
+    pub blur_type: u32,
+    pub amount: f32,
+    pub filter_index: u32,
+    pub fade_in_time: f32,
+    pub fade_out_time: f32
 }
 
 impl<'r> SclyPropertyData for CameraBlurKeyframe<'r> {

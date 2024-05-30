@@ -4843,7 +4843,7 @@
                                 "$ref": "#/$defs/addModifyLayer"
                             },
                             "active": {
-                                "description": "Default active state of the ControllerAction object.",
+                                "description": "Default active state of the object.",
                                 "type": "boolean",
                                 "default": true
                             },
@@ -4926,6 +4926,66 @@
                             "id",
                             "filterType",
                             "filterShape"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "cameraBlurKeyframes": {
+                    "description": "Add CameraBlurKeyframe objects in this room. They can add certain blur effects to the screen.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/$defs/addModifyId"
+                            },
+                            "layer": {
+                                "$ref": "#/$defs/addModifyLayer"
+                            },
+                            "active": {
+                                "description": "Default active state of the object.",
+                                "type": "boolean",
+                                "default": true
+                            },
+                            "blurType": {
+                                "description": "Specify the desired type of blur.",
+                                "type": "string",
+                                "enum": [
+                                    "NoBlur",
+                                    "LowBlur",
+                                    "HighBlur",
+                                    "XRay"
+                                ],
+                                "default": "LowBlur"
+                            },
+                            "amount": {
+                                "type": "number",
+                                "default": 1.0,
+                                "minimum": -1000000.0,
+                                "maximum": 1000000.0
+                            },
+                            "filterIndex": {
+                                "description": "The index of the filter. The highest index will be the one to be drawn on top of the other filters with a lower index number.",
+                                "type": "integer",
+                                "default": 0,
+                                "minimum": 0
+                            },
+                            "fadeInTime": {
+                                "description": "Specify the speed in which the filter will fade in.",
+                                "type": "number",
+                                "default": 0.0,
+                                "minimum": 0.0
+                            },
+                            "fadeOutTime": {
+                                "description": "Specify the speed in which the filter will fade out.",
+                                "type": "number",
+                                "default": 0.0,
+                                "minimum": 0.0
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "blurType"
                         ],
                         "additionalProperties": false
                     }

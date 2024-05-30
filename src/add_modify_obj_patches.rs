@@ -13,7 +13,7 @@ use crate::{
         HudmemoConfig, LockOnPoint, PlatformConfig, PlatformType, PlayerActorConfig,
         PlayerHintConfig, RelayConfig, SpawnPointConfig, SpecialFunctionConfig,
         StreamedAudioConfig, SwitchConfig, TimerConfig, TriggerConfig, WaterConfig, WaypointConfig,
-        WorldLightFaderConfig, CameraFilterKeyframeConfig,
+        WorldLightFaderConfig, CameraFilterKeyframeConfig, CameraBlurKeyframeConfig,
     },
     patcher::PatcherState,
     patches::{string_to_cstr, WaterType},
@@ -1913,6 +1913,59 @@ pub fn patch_add_camera_filter_keyframe<'r>(
         Some(config.id),
         config.layer,
         CameraFilterKeyframe,
+        new,
+        update
+    );
+}
+
+pub fn patch_add_camera_blur_keyframe<'r>(
+    _ps: &mut PatcherState,
+    area: &mut mlvl_wrapper::MlvlArea,
+    config: CameraBlurKeyframeConfig,
+) -> Result<(), String> {
+    macro_rules! new {
+        () => {
+            structs::CameraBlurKeyframe {
+                name: b"my blur filter\0".as_cstr(),
+                active: config.active.unwrap_or(true) as u8,
+                blur_type: config.blur_type as u32,
+                amount: config.amount.unwrap_or(1.0) as f32,
+                filter_index: config.filter_index.unwrap_or(0) as u32,
+                fade_in_time: config.fade_in_time.unwrap_or(0.0) as f32,
+                fade_out_time: config.fade_out_time.unwrap_or(0.0) as f32,
+            }
+        };
+    }
+
+    macro_rules! update {
+        ($obj:expr) => {
+            let property_data = $obj.property_data.as_camera_blur_keyframe_mut().unwrap();
+
+            property_data.blur_type = config.blur_type as u32;
+
+            if let Some(active) = config.active {
+                property_data.active = active as u8
+            }
+            if let Some(amount) = config.amount {
+                property_data.amount = amount as f32
+            }
+            if let Some(filter_index) = config.filter_index {
+                property_data.filter_index = filter_index as u32
+            }
+            if let Some(fade_in_time) = config.fade_in_time {
+                property_data.fade_in_time = fade_in_time as f32
+            }
+            if let Some(fade_out_time) = config.fade_out_time {
+                property_data.fade_out_time = fade_out_time as f32
+            }
+        };
+    }
+
+    add_edit_obj_helper!(
+        area,
+        Some(config.id),
+        config.layer,
+        CameraBlurKeyframe,
         new,
         update
     );
