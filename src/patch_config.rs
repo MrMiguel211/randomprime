@@ -979,6 +979,17 @@ pub struct PathCameraConfig {
     pub max_ease_dist: Option<f32>,
 }
 
+#[derive(Serialize, Deserialize, Debug, Clone)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct RandomRelayConfig {
+    pub id: u32,
+    pub layer: Option<u32>,
+    pub send_set_size: Option<u32>,
+    pub send_set_variance: Option<u32>,
+    pub percent_size: Option<bool>,
+    pub active: Option<bool>,
+}
+
 #[allow(non_camel_case_types)]
 #[derive(Debug, Serialize, Deserialize, Copy, Clone, Eq, PartialEq)]
 #[repr(u32)]
@@ -1199,6 +1210,7 @@ pub struct RoomConfig {
     pub set_memory_relays: Option<Vec<u32>>,
     pub ball_triggers: Option<Vec<BallTriggerConfig>>,
     pub path_cameras: Option<Vec<PathCameraConfig>>,
+    pub random_relays: Option<Vec<RandomRelayConfig>>,
     // Don't forget to update merge_json when adding here
 }
 
@@ -2109,6 +2121,7 @@ impl PatchConfigPrivate {
                 extend_option_vec!(camera_hint_triggers, self_room_config, other_room_config);
                 extend_option_vec!(ball_triggers, self_room_config, other_room_config);
                 extend_option_vec!(path_cameras, self_room_config, other_room_config);
+                extend_option_vec!(random_relays, self_room_config, other_room_config);
 
                 if let Some(other_layers) = &other_room_config.layers {
                     if self_room_config.layers.is_none() {

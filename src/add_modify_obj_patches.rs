@@ -12,7 +12,7 @@ use crate::{
         CameraConfig, CameraFilterKeyframeConfig, CameraHintTriggerConfig, CameraWaypointConfig,
         ControllerActionConfig, CounterConfig, DamageType, FogConfig, GenericTexture,
         HudmemoConfig, InitialSplinePosition, LockOnPoint, NewCameraHintConfig, PathCameraConfig,
-        PlatformConfig, PlatformType, PlayerActorConfig, PlayerHintConfig, RelayConfig,
+        PlatformConfig, PlatformType, PlayerActorConfig, PlayerHintConfig, RandomRelayConfig, RelayConfig,
         SpawnPointConfig, SpecialFunctionConfig, StreamedAudioConfig, SwitchConfig, TimerConfig,
         TriggerConfig, WaterConfig, WaypointConfig, WorldLightFaderConfig,
     },
@@ -2441,6 +2441,45 @@ pub fn patch_add_ball_trigger(
     }
 
     add_edit_obj_helper!(area, config.id, config.layer, BallTrigger, new, update);
+}
+
+pub fn patch_add_random_relay(
+    _ps: &mut PatcherState,
+    area: &mut mlvl_wrapper::MlvlArea,
+    config: RandomRelayConfig,
+) -> Result<(), String> {
+    macro_rules! new {
+        () => {
+            structs::RandomRelay {
+                name: b"my randomrelay\0".as_cstr(),
+                send_set_size: config.send_set_size.unwrap_or(1) as u32,
+                send_set_variance: config.send_set_variance.unwrap_or(0) as u32,
+                percent_size: config.percent_size.unwrap_or(false) as u8,
+                active: config.active.unwrap_or(true) as u8,
+            }
+        };
+    }
+
+    macro_rules! update {
+        ($obj:expr) => {
+            let property_data = $obj.property_data.as_random_relay_mut().unwrap();
+
+            if let Some(send_set_size) = config.send_set_size {
+                property_data.send_set_size = send_set_size as u32
+            }
+            if let Some(send_set_variance) = config.send_set_variance {
+                property_data.send_set_variance = send_set_variance as u32
+            }
+            if let Some(percent_size) = config.percent_size {
+                property_data.percent_size = percent_size as u8
+            }
+            if let Some(active) = config.active {
+                property_data.active = active as u8
+            }
+        };
+    }
+
+    add_edit_obj_helper!(area, config.id, config.layer, RandomRelay, new, update);
 }
 
 #[allow(clippy::too_many_arguments)]

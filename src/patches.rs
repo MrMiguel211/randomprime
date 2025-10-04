@@ -17781,6 +17781,15 @@ fn build_and_run_patches<'r>(
                             }
                         }
 
+                        if let Some(random_relays) = room.random_relays.as_ref() {
+                            for config in random_relays {
+                                patcher.add_scly_patch(
+                                    (pak_name.as_bytes(), room_info.room_id.to_u32()),
+                                    move |ps, area| patch_add_random_relay(ps, area, config.clone()),
+                                );
+                            }
+                        }
+
                         if room.streamed_audios.is_some() {
                             for config in room.streamed_audios.as_ref().unwrap() {
                                 patcher.add_scly_patch(

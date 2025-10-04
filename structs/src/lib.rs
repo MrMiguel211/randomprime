@@ -55,6 +55,7 @@ pub mod scly_props {
     pub mod player_actor;
     pub mod player_hint;
     pub mod point_of_interest;
+    pub mod random_relay;
     pub mod relay;
     pub mod snake_weed_swarm;
     pub mod sound;
@@ -147,7 +148,7 @@ pub mod scly_props {
         new_camera_shaker::*, new_intro_boss::*, omega_pirate::*, parasite::*, path_camera::*,
         phazon_healing_nodule::*, phazon_pool::*, pickup::*, pickup_generator::*, platorm::*,
         player_actor::*, player_hint::*, point_of_interest::*, puddle_spore::*,
-        puddle_toad_gamma::*, puffer::*, relay::*, ridley_v1::*, ridley_v2::*, ripper::*,
+        puddle_toad_gamma::*, puffer::*,random_relay::*, relay::*, ridley_v1::*, ridley_v2::*, ripper::*,
         seedling::*, snake_weed_swarm::*, sound::*, space_pirate::*, spank_weed::*, spawn_point::*,
         special_function::*, spider_ball_waypoint::*, streamed_audio::*, switch::*, thardus::*,
         thardus_rock_projectile::*, timer::*, trigger::*, tryclops::*, war_wasp::*, water::*,
