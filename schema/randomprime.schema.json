@@ -5605,6 +5605,45 @@
                         ],
                         "additionalProperties": false
                     }
+                },
+                "randomRelays": {
+                    "description": "Add random relays to this room. Useful for adding randomness in scripting",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/$defs/addModifyId"
+                            },
+                            "layer": {
+                                "$ref": "#/$defs/addModifyLayer"
+                            },
+                            "sendSetSize": {
+                                "description": "Number of actions that will be done in the connection index.",
+                                "type": "integer",
+                                "default": 1
+                            },
+                            "sendSetVariance": {
+                                "type": "integer",
+                                "default": 0
+                            },
+                            "percentSize": {
+                                "description": "Determines if the set size will be considered as a percentage, then if the roll is sucessful the random relay will act as a regular relay",
+                                "type": "boolean",
+                                "default": false
+                            },
+                            "active": {
+                                "description": "Default active state of the random relay.",
+                                "type": "boolean",
+                                "default": true
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "sendSetSize"
+                        ],
+                        "additionalProperties": false
+                    }
                 }
             },
             "additionalProperties": false

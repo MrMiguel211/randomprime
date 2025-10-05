@@ -982,7 +982,7 @@ pub struct PathCameraConfig {
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RandomRelayConfig {
-    pub id: u32,
+    pub id: Option<u32>,
     pub layer: Option<u32>,
     pub send_set_size: Option<u32>,
     pub send_set_variance: Option<u32>,
