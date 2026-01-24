@@ -28769,7 +28769,7 @@
                         {
                             "id": 655496, // [CameraFilterKeyframe] Skip Black Screen
                             "filterType": "Multiply",
-                            "filterIndex": 3,
+                            "filterIndex": 2,
                             "filterShape": "Fullscreen",
                             "fadeInTime": 0.0,
                             "fadeOutTime": 0.5
@@ -29005,7 +29005,7 @@
                             "id": 720916, // [CameraFilterKeyframe] Camera Filter Keyframe Hold Black
                             "filterShape": "Fullscreen",
                             "filterType": "Multiply",
-                            "filterIndex": 3,
+                            "filterIndex": 2,
                             "fadeOutTime": 0.5
                         }
                     ],
