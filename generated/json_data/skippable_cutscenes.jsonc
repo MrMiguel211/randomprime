@@ -3739,10 +3739,22 @@
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 3408117, // [Camera] Camera_BowlerIntro
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ACTIVE",
+                            "message": "INCREMENT"
+                        },
+                        {
                             "senderId": 3407942, // [Camera] Camera_FollowPlayerBowl
                             "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
                             "state": "INACTIVE",
                             "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3407942, // [Camera] Camera_FollowPlayerBowl
+                            "targetId": 3408233, // [CameraHint] Bowler Fixed Camera Hint
+                            "state": "INACTIVE",
+                            "message": "INCREMENT"
                         },
                         {
                             "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
@@ -3767,6 +3779,18 @@
                             "targetId": 3408641, // [Timer] Timer - hud memo
                             "state": "INACTIVE",
                             "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3407932, // [Trigger] Trigger_Bowl
+                            "targetId": 3408117, // [Camera] Camera_BowlerIntro
+                            "state": "ENTERED",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3407946, // [Camera] Camera_RightBowlCamera
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "INACTIVE",
+                            "message": "DECREMENT"
                         },
 // Remove ActorRotate connections that are not to the platform as to not make them do stuff on instant rotation
                         {
@@ -3958,6 +3982,12 @@
                             "state": "ZERO",
                             "message": "SET_TO_ZERO"
                         },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408932, // [Relay] Bridge Reset - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
 // Bomb Slots Release Skip Timer Connections
                         {
                             "senderId": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay    
@@ -3977,10 +4007,54 @@
                             "state": "ZERO",
                             "message": "DEACTIVATE"
                         },
+// Bowler Skip Light Control
+                        {
+                            "senderId": 3408925, // [Relay] Bowler Skip - Reset Lights
+                            "targetId": 3408926, // [Timer] Bowler Skip - Reset Lightning
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408925, // [Relay] Bowler Skip - Reset Lights
+                            "targetId": 3408405, // [Timer] Timer - delay before fading up lights
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408926, // [Timer] Bowler Skip - Reset Lightning
+                            "targetId": 3408362, // [WorldLightFader] World Light Fader_brighten
+                            "state": "ZERO",
+                            "message": "ACTION"
+                        },
+// Reset Bowler Skips when Slots Reset
+                        {
+                            "senderId": 3408241, // [Relay] Relay Reset (Open) Slots
+                            "targetId": 3408889, // [Relay] Bowler Wave Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408241, // [Relay] Relay Reset (Open) Slots
+                            "targetId": 3408890, // [Relay] Bowler Ice Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408241, // [Relay] Relay Reset (Open) Slots
+                            "targetId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
 // Central Platform Connections
                         {
                             "senderId": 3408904, // [ActorKeyframe] Grate Insta-Close
                             "targetId": 3407907, // [Actor] Grate
+                            "state": "PLAY",
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 3408923, // [ActorKeyframe] Reset Chozo Bowler
+                            "targetId": 3407931, // [Actor] Actor_ChozoBowler
                             "state": "PLAY",
                             "message": "PLAY"
                         },
@@ -4202,54 +4276,6 @@
                             "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
                             "state": "ZERO",
                             "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3408282, // [Trigger] Trigger Back up Land
-                            "targetId": 3408909, // [Relay] Bridge Reset Start
-                            "state": "ENTERED",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408909, // [Relay] Bridge Reset Start
-                            "targetId": 3408276, // [Timer] Timer Move To Default Delay
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408909, // [Relay] Bridge Reset Start
-                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408909, // [Relay] Bridge Reset Start
-                            "targetId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408909, // [Relay] Bridge Reset Start
-                            "targetId": 3408286, // [Relay] Relay_EnableDefault
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
-                            "targetId": 3408910, // [Relay] Bridge Reset End
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408910, // [Relay] Bridge Reset End
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3408910, // [Relay] Bridge Reset End
-                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
                         },
                         {
                             "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
@@ -4637,40 +4663,155 @@
                             "state": "ZERO",
                             "message": "NEXT"
                         },
-// Wave Throw Cutscene
+// Bowler Throw Cutscene
                         {
-                            "senderId": 3408277, // [Timer] Timer Right Delay
-                            "targetId": 3408909, // [Relay] Bridge Reset Start
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-// Return from Down Cutscene
-                        {
-                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
-                            "targetId": 3408913, // [Relay] Down Return Start
+                            "senderId": 3407932, // [Trigger] Trigger_Bowl
+                            "targetId": 3408919, // [Relay] Bowler Throw Start
                             "state": "ENTERED",
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3408913, // [Relay] Down Return Start
+                            "senderId": 3408919, // [Relay] Bowler Throw Start
+                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408919, // [Relay] Bowler Throw Start
                             "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
                             "state": "ZERO",
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3408913, // [Relay] Down Return Start
+                            "senderId": 3408919, // [Relay] Bowler Throw Start
+                            "targetId": 3408117, // [Camera] Camera_BowlerIntro
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3407938, // [Trigger] Trigger_DefaultLand
+                            "targetId": 3408920, // [Relay] Bowler Throw End
+                            "state": "ENTERED",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3407938, // [Trigger] Trigger_DefaultLand
+                            "targetId": 3408233, // [CameraHint] Bowler Fixed Camera Hint
+                            "state": "ENTERED",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408920, // [Relay] Bowler Throw End
+                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408920, // [Relay] Bowler Throw End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3407944, // [SpecialFunction] SpecialFunction PlayerFollowLocator
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3408923, // [ActorKeyframe] Reset Chozo Bowler
+                            "state": "ZERO",
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3407936, // [Trigger] Trigger_DefaultBowlCameraChange
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3407901, // [Trigger] Trigger_BowlPush
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3407933, // [Relay] Relay ResetChozoBowler
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3407937, // [Trigger] Trigger_DefaultLaunch
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3407938, // [Trigger] Trigger_DefaultLand
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3408921, // [SpawnPoint] Neutral Throw Skip Final Position
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3408922, // [Trigger] Push Player Up Spider Track
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "targetId": 3408925, // [Relay] Bowler Skip - Reset Lights
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+// Wave Throw Cutscene
+                        {
+                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
+                            "targetId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
+                            "targetId": 3408889, // [Relay] Bowler Wave Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+// Ice Return Cutscene
+                        {
+                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
+                            "targetId": 3408913, // [Relay] Ice Return Start
+                            "state": "ENTERED",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408913, // [Relay] Ice Return Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408913, // [Relay] Ice Return Start
                             "targetId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
                             "state": "ZERO",
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 3408913, // [Relay] Down Return Start
+                            "senderId": 3408913, // [Relay] Ice Return Start
                             "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
                             "state": "ZERO",
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 3408913, // [Relay] Down Return Start
+                            "senderId": 3408913, // [Relay] Ice Return Start
                             "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
                             "state": "ZERO",
                             "message": "INCREMENT"
@@ -4698,6 +4839,169 @@
                             "targetId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
                             "state": "CLOSED",
                             "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408916, // [Switch] Has Player touched Back up Land?
+                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
+                            "state": "CLOSED",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408916, // [Switch] Has Player touched Back up Land?
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "CLOSED",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408916, // [Switch] Has Player touched Back up Land?
+                            "state": "ZERO",
+                            "message": "OPEN"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408914, // [Relay] Down Return End
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408275, // [ActorRotate] ActorRotate DownToDefault
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408908, // [Relay] DownToDefault - Instant Turn
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408929, // [SpawnPoint] Ice Return Skip Final Position
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408110, // [CameraHint] Camera Hint - Down Tunnel Forcefields
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408104, // [Trigger] Trigger_BackUpLaunch1
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408105, // [Trigger] Trigger_BackUpLaunch2
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408911, // [Timer] Bridge ToDefault Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408282, // [Trigger] Trigger Back up Land
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "targetId": 3408271, // [Relay] Relay Reset Bridge Caps
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408908, // [Relay] DownToDefault - Instant Turn
+                            "targetId": 3408023, // [Sound] rock stop sound
+                            "state": "ZERO",
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 3408908, // [Relay] DownToDefault - Instant Turn
+                            "targetId": 3408275, // [ActorRotate] ActorRotate DownToDefault
+                            "state": "ZERO",
+                            "message": "NEXT"
+                        },
+// Bridge Reset Cutscene
+                        {
+                            "senderId": 3408277, // [Timer] Timer Right Delay
+                            "targetId": 3408909, // [Relay] Bridge Reset Start
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408282, // [Trigger] Trigger Back up Land
+                            "targetId": 3408909, // [Relay] Bridge Reset Start
+                            "state": "ENTERED",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408276, // [Timer] Timer Move To Default Delay
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408911, // [Timer] Bridge ToDefault Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408932, // [Relay] Bridge Reset - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408286, // [Relay] Relay_EnableDefault
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
+                            "targetId": 3408910, // [Relay] Bridge Reset End
+                            "state": "INACTIVE",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408910, // [Relay] Bridge Reset End
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408910, // [Relay] Bridge Reset End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
                         }
                     ],
                     "specialFunctions": [
@@ -4742,8 +5046,7 @@
                         },
                         {
                             "id": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
-                            "name": "Bowler Neutral Throw - Skip to COMPLETE",
-                            "active": false
+                            "name": "Bowler Neutral Throw - Skip to COMPLETE"
                         },
                         {
                             "id": 3408889, // [Relay] Bowler Wave Throw - Skip to COMPLETE
@@ -4758,6 +5061,11 @@
                         {
                             "id": 3408891, // [Relay] Ice Return - Skip to COMPLETE
                             "name": "Ice Return - Skip to COMPLETE",
+                            "active": false
+                        },
+                        {
+                            "id": 3408932, // [Relay] Bridge Reset - Skip to COMPLETE
+                            "name": "Bridge Reset - Skip to COMPLETE",
                             "active": false
                         },
                         {
@@ -4785,6 +5093,14 @@
                             "name": "Master Slot End"
                         },
                         {
+                            "id": 3408919, // [Relay] Bowler Throw Start
+                            "name": "Bowler Throw Start"
+                        },
+                        {
+                            "id": 3408920, // [Relay] Bowler Throw End
+                            "name": "Bowler Throw End"
+                        },
+                        {
                             "id": 3408900, // [Relay] Wave Slot Start
                             "name": "Wave Slot Start"
                         },
@@ -4809,12 +5125,16 @@
                             "name": "Bridge Reset End"
                         },
                         {
-                            "id": 3408913, // [Relay] Down Return Start
+                            "id": 3408913, // [Relay] Ice Return Start
                             "name": "Down Return Start"
                         },
                         {
                             "id": 3408914, // [Relay] Down Return End
                             "name": "Down Return End"
+                        },
+                        {
+                            "id": 3408925, // [Relay] Bowler Skip - Reset Lights
+                            "name": "Bowler Skip - Reset Lights"
                         },
                         {
                             "id": 3408903, // [Relay] DefaultToRight - Instant Turn
@@ -4841,6 +5161,10 @@
                         {
                             "id": 3408904, // [ActorKeyframe] Grate Insta-Close
                             "name": "Grate Insta-Close"
+                        },
+                        {
+                            "id": 3408923, // [ActorKeyframe] Reset Chozo Bowler
+                            "name": "Reset Chozo Bowler"
                         }
                     ],
                     "timers": [
@@ -4863,6 +5187,11 @@
                             "id": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
                             "time": 9.2,
                             "name": "Bridge Rotation Complete - Disable Instant Rotators"
+                        },
+                        {
+                            "id": 3408926, // [Timer] Bowler Skip - Reset Lightning
+                            "time": 2.0,
+                            "name": "Bowler Skip - Reset Lightning"
                         }
                     ],
                     // Renaming of Cameras
@@ -4890,6 +5219,54 @@
                         {
                             "id": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
                             "name": "Camera_WatchSlotReset"
+                        }
+                    ],
+                    "spawnPoints": [
+                        {
+                            "id": 3408921, // [SpawnPoint] Neutral Throw Skip Final Position
+                            "name": "Neutral Throw Skip Final Position",
+                            "position": [781.436523, -155.201431, 61.7828751],
+                            "morphed": true
+                        },
+                        {
+                            "id": 3408927, // [SpawnPoint] Wave Throw Skip Final Position
+                            "name": "Wave Throw Skip Final Position",
+                            "position": [799.936584, -168.084488, 72.2072449],
+                            "morphed": true
+                        },
+                        {
+                            "id": 3408930, // [SpawnPoint] Ice Throw Skip Final Position
+                            "name": "Ice Throw Skip Final Position",
+                            "position": [765.636597, -158.111176, 30.6461945],
+                            "morphed": true
+                        },
+                        {
+                            "id": 3408929, // [SpawnPoint] Ice Return Skip Final Position
+                            "name": "Ice Return Skip Final Position",
+                            "position": [781.035339, -184.525772, 48.5247116],
+                            "morphed": true
+                        }
+                    ],
+                    "triggers": [
+                        {
+                            "id": 3408922, // [Trigger] Push Player Up Spider Track
+                            "name": "Push Player Up Spider Track",
+                            "position": [781.436523, -155.201431, 61.782875],
+                            "scale": [1.0, 1.0, 1.0],
+                            "force": [0.0, 1000.0, 1000.0],
+                            "flags": 8193, // DetectPlayer / UseCollisionImpulses
+                            "active": false,
+                            "deactivateOnExit": true
+                        },
+                        {
+                            "id": 3408931, // [Trigger] Push Player in Ice Chamber
+                            "name": "Push Player in Ice Chamber",
+                            "position": [765.636597, -158.111176, 30.6461945],
+                            "scale": [1.0, 1.0, 1.0],
+                            "force": [0.0, -1000.0, 0.0],
+                            "flags": 8193, // DetectPlayer / UseCollisionImpulses
+                            "active": false,
+                            "deactivateOnExit": true
                         }
                     ],
                     "cameraFilterKeyframes": [
