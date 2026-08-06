@@ -3629,2379 +3629,1275 @@
                     ]
                 },
                 "Hall of the Elders": {
-                    "deleteIds": [
-                        3407917 // [Timer] Grate open timer
-                    ],
                     "removeConnections": [
                         {
-                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
-                            "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
-                            "state": "ENTERED",
+                            "senderId": 3408195, // [Timer] Delay before Ghost Outro
+                            "targetId": 3408194, // [Camera] Camera_Ghost Outro
+                            "state": "ZERO",
                             "message": "ACTIVATE"
                         },
                         {
+                            "senderId": 3408194, // [Camera] Camera_Ghost Outro
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ACTIVE",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408194, // [Camera] Camera_Ghost Outro
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "INACTIVE",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408194, // [Camera] Camera_Ghost Outro
+                            "targetId": 3408198, // [HUDMemo] HUDMemo
+                            "state": "INACTIVE",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408194, // [Camera] Camera_Ghost Outro
+                            "targetId": 3408760, // [SpawnPoint] Spawn point
+                            "state": "ACTIVE",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
                             "senderId": 3407976, // [DamageableTrigger] DamageableTrigger Slot4
-                            "targetId": 3408261, // [Camera] Cinematic Camera
+                            "targetId": 3408261, // [Camera] Camera_Master Slot
                             "state": "DEAD",
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 3407946, // [Camera] Camera_RightBowlCamera
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
+                            "senderId": 3408261, // [Camera] Camera_Master Slot
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ACTIVE",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408261, // [Camera] Camera_Master Slot
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "INACTIVE",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3407930, // [Camera] Camera_MoveToRight
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ACTIVE",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3407930, // [Camera] Camera_MoveToRight
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "INACTIVE",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3407930, // [Camera] Camera_MoveToRight
+                            "targetId": 3408641, // [Timer] Timer - hud memo
+                            "state": "INACTIVE",
+                            "message": "RESET_AND_START"
                         },
                         {
                             "senderId": 3408282, // [Trigger] Trigger Back up Land
-                            "targetId": 3408275, // [ActorRotate] ActorRotate DownToDefault
+                            "targetId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
                             "state": "ENTERED",
                             "message": "ACTIVATE"
                         },
                         {
                             "senderId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
-                            "targetId": 3407925, // [CameraFilterKeyframe] Camera Filter Keyframe Widescreen
-                            "state": "ACTIVE",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407942, // [Camera] Camera_FollowPlayerBowl
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407946, // [Camera] Camera_RightBowlCamera
-                            "targetId": 3407925, // [CameraFilterKeyframe] Camera Filter Keyframe Widescreen
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407924, // [Camera] Camera_MoveToDown
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ACTIVE",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407924, // [Camera] Camera_MoveToDown
-                            "targetId": 3407925, // [CameraFilterKeyframe] Camera Filter Keyframe Widescreen
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407930, // [Camera] Camera_MoveToRight
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ACTIVE",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407930, // [Camera] Camera_MoveToRight
-                            "targetId": 3407925, // [CameraFilterKeyframe] Camera Filter Keyframe Widescreen
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407932, // [Trigger] Trigger_Bowl
-                            "targetId": 3408117, // [Camera] Camera_BowlerIntro
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408195, // [Timer] Timer
-                            "targetId": 3408194, // [Camera] Cinematic Camera
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        // Frame Perfect Bullshit Fix
-                        {
-                            "senderId": 3408194, // [Camera] Cinematic Camera
-                            "targetId": 3408198, // [HUDMemo] HUDMemo
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408194, // [Camera] Cinematic Camera
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3408194, // [Camera] Cinematic Camera
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ACTIVE",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408194, // [Camera] Cinematic Camera
-                            "targetId": 3408760, // [SpawnPoint] Spawn point
-                            "state": "ACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408117, // [Camera] Camera_BowlerIntro
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ACTIVE",
-                            "message": "INCREMENT"
-                        }
-                    ],
-                    "addConnections": [
-                        ///////////MASTER SLOT STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3407915, // [Relay] Start of Master Slot Cinema
-                            "targetId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407915, // [Relay] Start of Master Slot Cinema
-                            "targetId": 3408261, // [Camera] Cinematic Camera
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407915, // [Relay] Start of Master Slot Cinema
-                            "targetId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407976, // [DamageableTrigger] DamageableTrigger Slot4
-                            "targetId": 3407915, // [Relay] Start of Master Slot Cinema
-                            "state": "DEAD",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408261, // [Camera] Cinematic Camera
-                            "targetId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407916, // [Relay] End of Master Slot Cinema
-                            "targetId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3407916, // [Relay] End of Master Slot Cinema
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408261, // [Camera] Cinematic Camera
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408252, // [BallTrigger] BallTrigger - Slot4
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408245, // [Timer] Timer Remove Plug1
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408324, // [Sound] Sound - Break Cover 1
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408234, // [Effect] Effect Plug Explode1
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408235, // [Actor] Actor - Cover Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408250, // [Timer] Timer Membrane1
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408208, // [Actor] Actor -membrane Slot1 Purple
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408246, // [Timer] Timer Remove Plug2
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3407876, // [Sound] Sound - Break Cover 2
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408112, // [Effect] Effect Plug Explode2
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408053, // [Actor] Actor - Cover Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408249, // [Timer] Timer Membrane2
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408207, // [Actor] Actor -membrane Slot2 White
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408326, // [Sound] Sound - Slot Light Up 2
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408247, // [Timer] Timer Remove Plug3
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3407875, // [Sound] Sound - Break Cover 3
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408113, // [Effect] Effect Plug Explode3
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408057, // [Actor] Actor - Cover Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408248, // [Timer] Timer Membrane3
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408206, // [Actor] Actor -membrane Slot3 Orange
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "targetId": 3408314, // [Relay] Relay POI Membrane
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        ///////////WAVE SLOT STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
-                            "targetId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
-                            "targetId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407921, // [Relay] EndMoveBridgeRight
-                            "targetId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407921, // [Relay] EndMoveBridgeRight
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407930, // [Camera] Camera_MoveToRight
-                            "targetId": 3407921, // [Relay] EndMoveBridgeRight
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407921, // [Relay] EndMoveBridgeRight
-                            "targetId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407921, // [Relay] EndMoveBridgeRight
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407921, // [Relay] EndMoveBridgeRight
-                            "targetId": 3408641, // [Timer] Timer - hud memo
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407921, // [Relay] EndMoveBridgeRight
-                            "targetId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407930, // [Camera] Camera_MoveToRight
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407994, // [Timer] Timer_MoveBridgeDelayRight
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407923, // [Timer] Stop Platform Sounds
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3408116, // [Timer] TimerBallTriggerReleaseSlot1
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407934, // [Timer] Advance Default to Right
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 3407971, // [Timer] Stop Grate Open Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        ///////////ICE SLOT STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
-                            "targetId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
-                            "targetId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407996, // [Relay] EndMoveBridgeDown
-                            "targetId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407924, // [Camera] Camera_MoveToDown
-                            "targetId": 3407996, // [Relay] EndMoveBridgeDown
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407996, // [Relay] EndMoveBridgeDown
-                            "targetId": 3408641, // [Timer] Timer - hud memo
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407996, // [Relay] EndMoveBridgeDown
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407996, // [Relay] EndMoveBridgeDown
-                            "targetId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407996, // [Relay] EndMoveBridgeDown
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407924, // [Camera] Camera_MoveToDown
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407999, // [Timer] Timer_MoveBridgeDelayDown
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407923, // [Timer] Stop Platform Sounds
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407926, // [Timer] TimerBallTriggerReleaseSlot2
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407998, // [Timer] Advance Default to Down
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 3407971, // [Timer] Stop Grate Open Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        ///////////PLASMA SLOT STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3408287, // [Relay] Relay Begin Chozo Bowler Move
-                            "targetId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408287, // [Relay] Relay Begin Chozo Bowler Move
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408287, // [Relay] Relay Begin Chozo Bowler Move
-                            "targetId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407902, // [Relay] End Chozo Bowler Move
-                            "targetId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3408290, // [Camera] Cinematic Camera
-                            "targetId": 3407902, // [Relay] End Chozo Bowler Move
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407902, // [Relay] End Chozo Bowler Move
-                            "targetId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407902, // [Relay] End Chozo Bowler Move
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3407873, // [Platform] Platform_ChozoBowler
-                            "state": "ZERO",
-                            "message": "NEXT"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3407986, // [Timer] Timer_ChozoBowlerMoveDelay
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408121, // [Timer] TimerBallTriggerReleaseSlot3
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408625, // [RumbleEffect] RumbleEffect_statue_moving
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408191, // [Effect] Effect-Bluelight
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408062, // [Timer] Timer_ChozoMoveSound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3408290, // [Camera] Cinematic Camera
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ACTIVE",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408290, // [Camera] Cinematic Camera
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408059, // [Sound] chozo move sound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3407902, // [Relay] End Chozo Bowler Move
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408060, // [Sound] chozo move rumble sound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "targetId": 3408061, // [Sound] chozo stop sound
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        ///////////GHOST DEATH STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3408195, // [Timer] Timer
-                            "targetId": 3407890, // [Relay] Ghost Death Cinematic Start
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407890, // [Relay] Ghost Death Cinematic Start
-                            "targetId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407890, // [Relay] Ghost Death Cinematic Start
-                            "targetId": 3408194, // [Camera] Cinematic Camera
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407890, // [Relay] Ghost Death Cinematic Start
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407890, // [Relay] Ghost Death Cinematic Start
-                            "targetId": 3408760, // [SpawnPoint] Spawn point
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408194, // [Camera] Cinematic Camera
-                            "targetId": 3407899, // [Relay] Ghost Death Cinematic End
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408194, // [Camera] Cinematic Camera
-                            "targetId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "state": "INACTIVE",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407899, // [Relay] Ghost Death Cinematic End
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3407899, // [Relay] Ghost Death Cinematic End
-                            "targetId": 3408198, // [HUDMemo] HUDMemo
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3407899, // [Relay] Ghost Death Cinematic End
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3408194, // [Camera] Cinematic Camera
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3408362, // [WorldLightFader] World Light Fader_brighten
-                            "state": "ZERO",
-                            "message": "ACTION"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "targetId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        ///////////ENERGY TANK OUT STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3407984, // [Relay] DownBowl Cinema Start
-                            "targetId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407984, // [Relay] DownBowl Cinema Start
-                            "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407984, // [Relay] DownBowl Cinema Start
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
-                            "targetId": 3407984, // [Relay] DownBowl Cinema Start
-                            "state": "ENTERED",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
-                            "targetId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
-                            "targetId": 3408275, // [ActorRotate] ActorRotate DownToDefault
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408008, // [Relay] DownBowl Cinema End
-                            "targetId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408008, // [Relay] DownBowl Cinema End
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408009, // [Timer] DownBowl Reposition
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
                             "targetId": 3408276, // [Timer] Timer Move To Default Delay
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408286, // [Relay] Relay_EnableDefault
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408271, // [Relay] Relay Reset Bridge Caps
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408241, // [Relay] Relay Reset (Open) Slots
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408104, // [Trigger] Trigger_BackUpLaunch1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408105, // [Trigger] Trigger_BackUpLaunch2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "targetId": 3408282, // [Trigger] Trigger Back up Land
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        ///////////BOWLER CINEMA STARTS HERE//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3407932, // [Trigger] Trigger_Bowl
-                            "targetId": 4407982, // [Relay] Bowler Throw Start
-                            "state": "ENTERED",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4407982, // [Relay] Bowler Throw Start
-                            "targetId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407942, // [Camera] Camera_FollowPlayerBowl
-                            "targetId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
                             "state": "ACTIVE",
-                            "message": "DECREMENT"
+                            "message": "RESET_AND_START"
                         },
                         {
-                            "senderId": 4407982, // [Relay] Bowler Throw Start
-                            "targetId": 3408117, // [Camera] Camera_BowlerIntro
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407982, // [Relay] Bowler Throw Start
+                            "senderId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
                             "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
+                            "state": "ACTIVE",
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 4407982, // [Relay] Bowler Throw Start
-                            "targetId": 5408016, // [SpawnPoint] Middle
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407942, // [Camera] Camera_FollowPlayerBowl
-                            "targetId": 4407983, // [Relay] Bowler Throw End
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4407983, // [Relay] Bowler Throw End
-                            "targetId": 5408016, // [SpawnPoint] Middle
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 3408117, // [Camera] Camera_BowlerIntro
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 4408013, // [Relay] Wave Throw Skip
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 4408014, // [Relay] Ice Throw Skip
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 4407985, // [Relay] Neutral Throw Skip
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 3407944, // [SpecialFunction] SpecialFunction PlayerFollowLocator
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 3407945, // [Timer] Timer_BowlRelease
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 3408028, // [ActorKeyframe] Reset Chozo Statue
-                            "state": "ZERO",
-                            "message": "ACTION"
-                        },
-                        {
-                            "senderId": 3408028, // [ActorKeyframe] Reset Chozo Statue
-                            "targetId": 3407931, // [Actor] Actor_ChozoBowler
-                            "state": "PLAY",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "targetId": 3407933, // [Relay] Relay ResetChozoBowler
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4408013, // [Relay] Wave Throw Skip
-                            "targetId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 4408013, // [Relay] Wave Throw Skip
-                            "targetId": 5408016, // [SpawnPoint] Middle
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 5408016, // [SpawnPoint] Middle
-                            "targetId": 3407932, // [Trigger] Trigger_Bowl
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4408013, // [Relay] Wave Throw Skip
-                            "targetId": 3407942, // [Camera] Camera_FollowPlayerBowl
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4408013, // [Relay] Wave Throw Skip
-                            "targetId": 5408029, // [Trigger] Yeet Wave
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 4408013, // [Relay] Wave Throw Skip
-                            "state": "EXITED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407911, // [DamageableTrigger] DamageableTrigger Slot1
-                            "targetId": 4408013, // [Relay] Wave Throw Skip
-                            "state": "DEAD",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407985, // [Relay] Neutral Throw Skip
-                            "targetId": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
-                        },
-                        {
-                            "senderId": 4407985, // [Relay] Neutral Throw Skip
-                            "targetId": 5408016, // [SpawnPoint] Middle
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4407985, // [Relay] Neutral Throw Skip
-                            "targetId": 3407942, // [Camera] Camera_FollowPlayerBowl
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407985, // [Relay] Neutral Throw Skip
-                            "targetId": 5408025, // [Trigger] Initial Yeet
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4407985, // [Relay] Neutral Throw Skip
-                            "targetId": 5408015, // [Trigger] Yeet Neutral
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 4407985, // [Relay] Neutral Throw Skip
-                            "state": "EXITED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407954, // [Trigger] Trigger_DownLand
-                            "targetId": 4407985, // [Relay] Neutral Throw Skip
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407911, // [DamageableTrigger] DamageableTrigger Slot1
-                            "targetId": 4407985, // [Relay] Neutral Throw Skip
-                            "state": "DEAD",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407912, // [DamageableTrigger] DamageableTrigger Slot2
-                            "targetId": 4407985, // [Relay] Neutral Throw Skip
-                            "state": "DEAD",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407912, // [DamageableTrigger] DamageableTrigger Slot2
-                            "targetId": 4408014, // [Relay] Ice Throw Skip
-                            "state": "DEAD",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4408014, // [Relay] Ice Throw Skip
-                            "targetId": 5408017, // [SpawnPoint] Bottom
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 4408014, // [Relay] Ice Throw Skip
-                            "targetId": 3407954, // [Trigger] Trigger_DownLand
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 4408014, // [Relay] Ice Throw Skip
-                            "targetId": 5408018, // [Trigger] Yeet 2
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407954, // [Trigger] Trigger_DownLand
-                            "targetId": 5408018, // [Trigger] Yeet 2
-                            "state": "ENTERED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 5408018, // [Trigger] Yeet 2
-                            "targetId": 3407901, // [Trigger] Trigger_BowlPush
-                            "state": "ENTERED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 5408018, // [Trigger] Yeet 2
-                            "targetId": 3408283, // [CameraHint] Camera Hint - Chozo Bowler Powerup
-                            "state": "ENTERED",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408760, // [SpawnPoint] Spawn point
-                            "targetId": 3407932, // [Trigger] Trigger_Bowl
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 5408015, // [Trigger] Yeet Neutral
-                            "targetId": 5408016, // [SpawnPoint] Middle
-                            "state": "EXITED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407954, // [Trigger] Trigger_DownLand
-                            "targetId": 3408362, // [WorldLightFader] World Light Fader_brighten
-                            "state": "ENTERED",
-                            "message": "ACTION"
-                        },
-                        {
-                            "senderId": 3407938, // [Trigger] Trigger_DefaultLand
-                            "targetId": 3408362, // [WorldLightFader] World Light Fader_brighten
-                            "state": "EXITED",
-                            "message": "ACTION"
-                        },
-                        {
-                            "senderId": 5408018, // [Trigger] Yeet 2
-                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ENTERED",
-                            "message": "DECREMENT"
-                        },
-                        ///////////BRIDGE CINEMAS STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3408006, // [Relay] RightBowl Cinema Start
-                            "targetId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3408006, // [Relay] RightBowl Cinema Start
-                            "targetId": 3407946, // [Camera] Camera_RightBowlCamera
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 3408006, // [Relay] RightBowl Cinema Start
-                            "state": "ENTERED",
+                            "senderId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
+                            "targetId": 3408286, // [Relay] Relay_EnableDefault
+                            "state": "ACTIVE",
                             "message": "SET_TO_ZERO"
                         },
                         {
                             "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
-                            "targetId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
                             "state": "INACTIVE",
                             "message": "DECREMENT"
                         },
                         {
-                            "senderId": 3407980, // [Relay] Bridge Cinema End
-                            "targetId": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "state": "ZERO",
-                            "message": "DECREMENT"
+                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
+                            "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
+                            "state": "ENTERED",
+                            "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
-                            "targetId": 3407980, // [Relay] Bridge Cinema End
-                            "state": "INACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3407980, // [Relay] Bridge Cinema End
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
+                            "senderId": 3408277, // [Timer] Timer Right Delay
                             "targetId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
                             "state": "ZERO",
-                            "message": "DEACTIVATE"
+                            "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408286, // [Relay] Relay_EnableDefault
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408281, // [Timer] Timer Reset Slot Delay
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408241, // [Relay] Relay Reset (Open) Slots
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
+                            "senderId": 3407942, // [Camera] Camera_FollowPlayerBowl
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "INACTIVE",
                             "message": "DECREMENT"
                         },
                         {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408276, // [Timer] Timer Move To Default Delay
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408362, // [WorldLightFader] World Light Fader_brighten
-                            "state": "ZERO",
-                            "message": "ACTION"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3407994, // [Timer] Timer_MoveBridgeDelayRight
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3407971, // [Timer] Stop Grate Open Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408005, // [Relay] Wave Slot Cutscenes
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408008, // [Relay] DownBowl Cinema End
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408277, // [Timer] Timer Right Delay
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        ///////////MISCELLANEUS STUFF STARTS HERE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408245, // [Timer] Timer Remove Plug1
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408324, // [Sound] Sound - Break Cover 1
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408234, // [Effect] Effect Plug Explode1
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408235, // [Actor] Actor - Cover Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408250, // [Timer] Timer Membrane1
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408208, // [Actor] Actor -membrane Slot1 Purple
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408246, // [Timer] Timer Remove Plug2
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3407876, // [Sound] Sound - Break Cover 2
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408112, // [Effect] Effect Plug Explode2
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408053, // [Actor] Actor - Cover Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408249, // [Timer] Timer Membrane2
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408207, // [Actor] Actor -membrane Slot2 White
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408326, // [Sound] Sound - Slot Light Up 2
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408247, // [Timer] Timer Remove Plug3
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3407875, // [Sound] Sound - Break Cover 3
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408113, // [Effect] Effect Plug Explode3
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408057, // [Actor] Actor - Cover Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408248, // [Timer] Timer Membrane3
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408206, // [Actor] Actor -membrane Slot3 Orange
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "targetId": 3408314, // [Relay] Relay POI Membrane
-                            "state": "ZERO",
-                            "message": "INCREMENT"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3407921, // [Relay] EndMoveBridgeRight
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3407994, // [Timer] Timer_MoveBridgeDelayRight
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3407923, // [Timer] Stop Platform Sounds
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3408116, // [Timer] TimerBallTriggerReleaseSlot1
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3407934, // [Timer] Advance Default to Right
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "targetId": 3407971, // [Timer] Stop Grate Open Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407996, // [Relay] EndMoveBridgeDown
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
+                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
                             "targetId": 3407924, // [Camera] Camera_MoveToDown
                             "state": "ZERO",
-                            "message": "DEACTIVATE"
+                            "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407999, // [Timer] Timer_MoveBridgeDelayDown
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
+                            "senderId": 3407924, // [Camera] Camera_MoveToDown
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ACTIVE",
+                            "message": "INCREMENT"
                         },
                         {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407923, // [Timer] Stop Platform Sounds
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407926, // [Timer] TimerBallTriggerReleaseSlot2
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407998, // [Timer] Advance Default to Down
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "targetId": 3407971, // [Timer] Stop Grate Open Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3407902, // [Relay] End Chozo Bowler Move
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3407873, // [Platform] Platform_ChozoBowler
-                            "state": "ZERO",
-                            "message": "NEXT"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3407986, // [Timer] Timer_ChozoBowlerMoveDelay
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408121, // [Timer] TimerBallTriggerReleaseSlot3
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
-                            "state": "ZERO",
+                            "senderId": 3407924, // [Camera] Camera_MoveToDown
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "INACTIVE",
                             "message": "DECREMENT"
                         },
                         {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408625, // [RumbleEffect] RumbleEffect_statue_moving
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408191, // [Effect] Effect-Bluelight
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408062, // [Timer] Timer_ChozoMoveSound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408059, // [Sound] chozo move sound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408060, // [Sound] chozo move rumble sound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408061, // [Sound] chozo stop sound
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 3408005, // [Relay] Wave Slot Cutscenes
-                            "targetId": 3407946, // [Camera] Camera_RightBowlCamera
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408005, // [Relay] Wave Slot Cutscenes
-                            "targetId": 3407991, // [Relay] Default Rotation Cutscene Checker (RightToDefault)
-                            "state": "ZERO",
+                            "senderId": 3407924, // [Camera] Camera_MoveToDown
+                            "targetId": 3408641, // [Timer] Timer - hud memo
+                            "state": "INACTIVE",
                             "message": "SET_TO_ZERO"
                         },
+// Remove ActorRotate connections that are not to the platform as to not make them do stuff on instant rotation
                         {
-                            "senderId": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "targetId": 3407923, // [Timer] Stop Platform Sounds
-                            "state": "ZERO",
+                            "senderId": 3407903, // [ActorRotate] PlatformRotateDefault_To_Right
+                            "targetId": 3407917, // [Timer] Grate open timer
+                            "state": "PLAY",
                             "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
-                            "targetId": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "state": "ACTIVE",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "targetId": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "targetId": 3408008, // [Relay] DownBowl Cinema End
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "targetId": 4407962, // [Relay] Default Rotation Cutscene Checker (DownToDefault)
-                            "state": "ZERO",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408002, // [Timer] Default Rotation Cutscene Timer
-                            "targetId": 3407991, // [Relay] Default Rotation Cutscene Checker (RightToDefault)
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408002, // [Timer] Default Rotation Cutscene Timer
-                            "targetId": 4407962, // [Relay] Default Rotation Cutscene Checker (DownToDefault)
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 3407991, // [Relay] Default Rotation Cutscene Checker (RightToDefault)
-                            "state": "EXITED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 3408005, // [Relay] Wave Slot Cutscenes
-                            "state": "EXITED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 4407962, // [Relay] Default Rotation Cutscene Checker (DownToDefault)
-                            "targetId": 3408001, // [Timer] Advance Down to Default
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408001, // [Timer] Advance Down to Default
-                            "targetId": 3408275, // [ActorRotate] ActorRotate DownToDefault
-                            "state": "ZERO",
-                            "message": "NEXT"
-                        },
-                        {
-                            "senderId": 3407923, // [Timer] Stop Platform Sounds
-                            "targetId": 3408020, // [Sound] grind sound slow
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407923, // [Timer] Stop Platform Sounds
-                            "targetId": 3408021, // [Sound] grind sound fast
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407923, // [Timer] Stop Platform Sounds
-                            "targetId": 3408022, // [Sound] rumble sound
-                            "state": "ZERO",
-                            "message": "STOP"
-                        },
-                        {
-                            "senderId": 3407923, // [Timer] Stop Platform Sounds
-                            "targetId": 3408023, // [Sound] rock stop sound
-                            "state": "ZERO",
-                            "message": "PLAY"
-                        },
-                        {
-                            "senderId": 3407923, // [Timer] Stop Platform Sounds
-                            "targetId": 3408046, // [Timer] Timer_GrindSound
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407923, // [Timer] Stop Platform Sounds
-                            "targetId": 3407975, // [Timer] New Grate Open Timer
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407971, // [Timer] Stop Grate Open Timer
-                            "targetId": 3407975, // [Timer] New Grate Open Timer
-                            "state": "ZERO",
-                            "message": "STOP_AND_RESET"
-                        },
-                        {
-                            "senderId": 3407975, // [Timer] New Grate Open Timer
-                            "targetId": 3407919, // [Timer] Grate Close Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407975, // [Timer] New Grate Open Timer
-                            "targetId": 3407908, // [ActorKeyframe] Grate Open
-                            "state": "ZERO",
-                            "message": "ACTION"
                         },
                         {
                             "senderId": 3407903, // [ActorRotate] PlatformRotateDefault_To_Right
-                            "targetId": 3407975, // [Timer] New Grate Open Timer
+                            "targetId": 3408044, // [Relay] Relay_BeginSoundGrindSlow
+                            "state": "PLAY",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408274, // [ActorRotate] ActorRotate RightToDefault
+                            "targetId": 3407917, // [Timer] Grate open timer
                             "state": "PLAY",
                             "message": "RESET_AND_START"
                         },
                         {
                             "senderId": 3408274, // [ActorRotate] ActorRotate RightToDefault
-                            "targetId": 3407975, // [Timer] New Grate Open Timer
+                            "targetId": 3408045, // [Relay] Relay_BeginSoundGrindFast
                             "state": "PLAY",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "targetId": 3408009, // [Timer] DownBowl Reposition
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408009, // [Timer] DownBowl Reposition
-                            "targetId": 3408760, // [SpawnPoint] Spawn point
-                            "state": "ZERO",
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3408009, // [Timer] DownBowl Reposition
-                            "targetId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
-                            "targetId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "state": "INACTIVE",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408003, // [Relay] Ice Slot Cutscenes
-                            "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408009, // [Timer] DownBowl Reposition
-                            "targetId": 3408274, // [ActorRotate] ActorRotate RightToDefault
-                            "state": "ZERO",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
-                            "targetId": 3408002, // [Timer] Default Rotation Cutscene Timer
-                            "state": "ACTIVE",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408760, // [SpawnPoint] Spawn point
-                            "targetId": 4407962, // [Relay] Default Rotation Cutscene Checker (DownToDefault)
-                            "state": "ZERO",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407934, // [Timer] Advance Default to Right
-                            "targetId": 3407903, // [ActorRotate] PlatformRotateDefault_To_Right 
-                            "state": "ZERO",
-                            "message": "NEXT"
-                        },
-                        {
-                            "senderId": 3407998, // [Timer] Advance Default to Down
-                            "targetId": 3407910, // [ActorRotate] PlatformRotateDefault_To_Down
-                            "state": "ZERO",
-                            "message": "NEXT"
-                        },
-                        {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 3408274, // [ActorRotate] ActorRotate RightToDefault
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 4408006, // [SpawnPoint] Spawn point
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 4408006, // [SpawnPoint] Spawn point
-                            "state": "EXITED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 4408006, // [SpawnPoint] Spawn point
-                            "state": "ZERO",
+                            "senderId": 3407910, // [ActorRotate] PlatformRotateDefault_To_Down
+                            "targetId": 3408044, // [Relay] Relay_BeginSoundGrindSlow
+                            "state": "PLAY",
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3407983, // [Timer] Advance Right to Default
-                            "targetId": 3408274, // [ActorRotate] ActorRotate RightToDefault
+                            "senderId": 3408275, // [ActorRotate] ActorRotate DownToDefault
+                            "targetId": 3408045, // [Relay] Relay_BeginSoundGrindFast
+                            "state": "PLAY",
+                            "message": "SET_TO_ZERO"
+                        }
+                    ],
+                    "addConnections": [
+// Cinematic Skip Connections
+                        {
+                            "senderId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "targetId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
                             "state": "ZERO",
-                            "message": "NEXT"
-                        },
-                        {
-                            "senderId": 3407991, // [Relay] Default Rotation Cutscene Checker (RightToDefault)
-                            "targetId": 3407983, // [Timer] Advance Right to Default
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 3408005, // [Relay] Wave Slot Cutscenes
-                            "state": "ENTERED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407943, // [Trigger] Trigger_RightBowlCameraChange
-                            "targetId": 3408614, // [PlayerHint] Player Hint Disable Controls
-                            "state": "ENTERED",
                             "message": "INCREMENT"
                         },
                         {
-                            "senderId": 3407949, // [Trigger] Trigger_RightLand
-                            "targetId": 3408011, // [Relay] Prevent Cutscene Relay
-                            "state": "ENTERED",
-                            "message": "SET_TO_ZERO"
-                        },
-                        {
-                            "senderId": 3408011, // [Relay] Prevent Cutscene Relay
-                            "targetId": 3408010, // [Timer] Prevent Cutscene Timer
-                            "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        },
-                        {
-                            "senderId": 3408010, // [Timer] Prevent Cutscene Timer
-                            "targetId": 3408277, // [Timer] Timer Right Delay
+                            "senderId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "targetId": 3408897, // [Timer] Delay before Decrementing of CinematicSkip
                             "state": "ZERO",
                             "message": "STOP_AND_RESET"
                         },
                         {
-                            "senderId": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "targetId": 3408011, // [Relay] Prevent Cutscene Relay
+                            "senderId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "targetId": 3408897, // [Timer] Delay before Decrementing of CinematicSkip
                             "state": "ZERO",
-                            "message": "ACTIVATE"
+                            "message": "START"
                         },
                         {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 3408011, // [Relay] Prevent Cutscene Relay
-                            "state": "EXITED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 3408760, // [SpawnPoint] Spawn point
-                            "state": "ENTERED",
-                            "message": "DEACTIVATE"
-                        },
-                        {
-                            "senderId": 3408027, // [Trigger] Upper Track Trigger
-                            "targetId": 3408760, // [SpawnPoint] Spawn point
-                            "state": "EXITED",
-                            "message": "ACTIVATE"
-                        },
-                        {
-                            "senderId": 3407954, // [Trigger] Trigger_DownLand
-                            "targetId": 3407925, // [CameraFilterKeyframe] Camera Filter Keyframe Widescreen
-                            "state": "ENTERED",
+                            "senderId": 3408897, // [Timer] Delay before Decrementing of CinematicSkip
+                            "targetId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "state": "ZERO",
                             "message": "DECREMENT"
                         },
                         {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408012, // [Timer] Stop Chozo Glow
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408117, // [Camera] Camera_BowlerIntro
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3407951, // [Camera] Camera_DownBowlCamera
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3407942, // [Camera] Camera_FollowPlayerBowl
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408194, // [Camera] Camera_Ghost Outro
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408261, // [Camera] Camera_Master Slot
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3407924, // [Camera] Camera_MoveToDown
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3407930, // [Camera] Camera_MoveToRight
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408290, // [Camera] Camera_Plasma Slot
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3407946, // [Camera] Camera_RightBowlCamera
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408106, // [Camera] Camera_WatchBackFromDown
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408273, // [Camera] Camera_WatchBridgeDefault
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408280, // [Camera] Camera_WatchSlotReset
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408883, // [Relay] Ghost Death - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408887, // [Relay] Plasma Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408889, // [Relay] Bowler Wave Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408890, // [Relay] Bowler Ice Throw - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "targetId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+// Bomb Slots Release Skip Timer Connections
+                        {
+                            "senderId": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay    
+                            "targetId": 3408091, // [BallTrigger] BallTrigger - Slot1
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay    
+                            "targetId": 3408114, // [BallTrigger] BallTrigger - Slot2
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay    
+                            "targetId": 3408115, // [BallTrigger] BallTrigger - Slot3
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+// Central Platform Connections
+                        {
+                            "senderId": 3408904, // [ActorKeyframe] Grate Insta-Close
+                            "targetId": 3407907, // [Actor] Grate
+                            "state": "PLAY",
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 3408101, // [Relay] Relay_RotateBridgeRight
+                            "targetId": 3407917, // [Timer] Grate open timer
                             "state": "ZERO",
                             "message": "RESET_AND_START"
                         },
                         {
-                            "senderId": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "targetId": 3408193, // [Timer] Timer - commencer la lumiere bleue
+                            "senderId": 3408101, // [Relay] Relay_RotateBridgeRight
+                            "targetId": 3408044, // [Relay] Relay_BeginSoundGrindSlow
                             "state": "ZERO",
-                            "message": "STOP_AND_RESET"
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3408012, // [Timer] Stop Chozo Glow and Sounds
-                            "targetId": 3408191, // [Effect] Effect-Bluelight
+                            "senderId": 3408102, // [Relay] Relay_RotateBridgeDown
+                            "targetId": 3407917, // [Timer] Grate open timer
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408102, // [Relay] Relay_RotateBridgeDown
+                            "targetId": 3408044, // [Relay] Relay_BeginSoundGrindSlow
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408276, // [Timer] Timer Move To Default Delay
+                            "targetId": 3407917, // [Timer] Grate open timer
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408276, // [Timer] Timer Move To Default Delay
+                            "targetId": 3408045, // [Relay] Relay_BeginSoundGrindFast
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+// Toggle instant rotation relays
+                        {
+                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
+                            "targetId": 3408903, // [Relay] DefaultToRight - Instant Turn
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
+                            "targetId": 3408907, // [Relay] DefaultToDown - Instant Turn
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3407949, // [Trigger] Trigger_RightLand
+                            "targetId": 3408906, // [Relay] RightToDefault - Instant Turn
+                            "state": "ENTERED",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
+                            "targetId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
+                            "targetId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "targetId": 3408903, // [Relay] DefaultToRight - Instant Turn
                             "state": "ZERO",
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 3408012, // [Timer] Stop Chozo Glow and Sounds
-                            "targetId": 3408191, // [Effect] Sound-Glowsound
+                            "senderId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "targetId": 3408907, // [Relay] DefaultToDown - Instant Turn
                             "state": "ZERO",
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
+                            "senderId": 3408911, // [Timer] Bridge ToDefault Rotation Complete - Disable Instant Rotators
+                            "targetId": 3408906, // [Relay] RightToDefault - Instant Turn
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408911, // [Timer] Bridge ToDefault Rotation Complete - Disable Instant Rotators
+                            "targetId": 3408908, // [Relay] DownToDefault - Instant Turn
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+// Ghost Outro Cutscene
+                        {
+                            "senderId": 3408195, // [Timer] Delay before Ghost Outro
+                            "targetId": 3408893, // [Relay] Ghost Outro Start
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408893, // [Relay] Ghost Outro Start
+                            "targetId": 3408883, // [Relay] Ghost Death - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408893, // [Relay] Ghost Outro Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408893, // [Relay] Ghost Outro Start
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408893, // [Relay] Ghost Outro Start
+                            "targetId": 3408194, // [Camera] Camera_Ghost Outro
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408893, // [Relay] Ghost Outro Start
                             "targetId": 3408760, // [SpawnPoint] Spawn point
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408194, // [Camera] Camera_Ghost Outro
+                            "targetId": 3408894, // [Relay] Ghost Outro End
                             "state": "INACTIVE",
                             "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
-                            "targetId": 4408071, // [Timer] Deactivate Rotators
-                            "state": "ACTIVE",
-                            "message": "RESET_AND_START"
+                            "senderId": 3408883, // [Relay] Ghost Death - Skip to COMPLETE
+                            "targetId": 3408894, // [Relay] Ghost Outro End
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 4408071, // [Timer] Deactivate Rotators
-                            "targetId": 3408275, // [ActorRotate] ActorRotate DownToDefault
+                            "senderId": 3408894, // [Relay] Ghost Outro End
+                            "targetId": 3408883, // [Relay] Ghost Death - Skip to COMPLETE
                             "state": "ZERO",
                             "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 4408071, // [Timer] Deactivate Rotators
-                            "targetId": 3408274, // [ActorRotate] ActorRotate RightToDefault
+                            "senderId": 3408894, // [Relay] Ghost Outro End
+                            "targetId": 3408198, // [HUDMemo] HUDMemo
                             "state": "ZERO",
-                            "message": "DEACTIVATE"
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3408102, // [Relay] Relay_RotateBridgeDown
-                            "targetId": 3407998, // [Timer] Advance Default to Down
+                            "senderId": 3408894, // [Relay] Ghost Outro End
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
                             "state": "ZERO",
-                            "message": "DEACTIVATE"
+                            "message": "DECREMENT"
                         },
                         {
-                            "senderId": 3408101, // [Relay] Relay_RotateBridgeRight
-                            "targetId": 3407934, // [Timer] Advance Default to Right
+                            "senderId": 3408894, // [Relay] Ghost Outro End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
                             "state": "ZERO",
-                            "message": "DEACTIVATE"
+                            "message": "SET_TO_ZERO"
+                        },
+// Master Bomb Slot Cutscene
+                        {
+                            "senderId": 3407976, // [DamageableTrigger] DamageableTrigger Slot4
+                            "targetId": 3408898, // [Relay] Master Slot Start
+                            "state": "DEAD",
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 4408051, // [Timer] Reactivate Instant Rotators
-                            "targetId": 3407998, // [Timer] Advance Default to Down
+                            "senderId": 3408898, // [Relay] Master Slot Start
+                            "targetId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
                             "state": "ZERO",
                             "message": "ACTIVATE"
                         },
                         {
-                            "senderId": 4408051, // [Timer] Reactivate Instant Rotators
-                            "targetId": 3407934, // [Timer] Advance Default to Right
+                            "senderId": 3408898, // [Relay] Master Slot Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408898, // [Relay] Master Slot Start
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408898, // [Relay] Master Slot Start
+                            "targetId": 3408261, // [Camera] Camera_Master Slot
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408261, // [Camera] Camera_Master Slot
+                            "targetId": 3408899, // [Relay] Master Slot End
+                            "state": "INACTIVE",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408899, // [Relay] Master Slot End
+                            "targetId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408899, // [Relay] Master Slot End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408899, // [Relay] Master Slot End
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408282, // [Trigger] Trigger Back up Land
+                            "targetId": 3408909, // [Relay] Bridge Reset Start
+                            "state": "ENTERED",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408276, // [Timer] Timer Move To Default Delay
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408909, // [Relay] Bridge Reset Start
+                            "targetId": 3408286, // [Relay] Relay_EnableDefault
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
+                            "targetId": 3408910, // [Relay] Bridge Reset End
+                            "state": "INACTIVE",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408910, // [Relay] Bridge Reset End
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408910, // [Relay] Bridge Reset End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408899, // [Relay] Master Slot End
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408268, // [Timer] TimerBallTriggerReleaseSlot4
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408245, // [Timer] Timer Remove Plug1
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408250, // [Timer] Timer Membrane1
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408246, // [Timer] Timer Remove Plug2
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408249, // [Timer] Timer Membrane2
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408247, // [Timer] Timer Remove Plug3
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408248, // [Timer] Timer Membrane3
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408252, // [BallTrigger] BallTrigger - Slot4
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408235, // [Actor] Actor - Cover Slot1
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408053, // [Actor] Actor - Cover Slot2
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408057, // [Actor] Actor - Cover Slot3
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408208, // [Actor] Actor -membrane Slot1 Purple
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408207, // [Actor] Actor -membrane Slot2 White
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408206, // [Actor] Actor -membrane Slot3 Orange
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3407876, // [Sound] Sound - Break Cover 2
+                            "state": "ZERO",
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408326, // [Sound] Sound - Slot Light Up 2
+                            "state": "ZERO",
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "targetId": 3408314, // [Relay] Relay POI Membrane
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+// Wave Slot Cutscene
+                        {
+                            "senderId": 3407995, // [Relay] Relay_BeginMoveBridgeRight
+                            "targetId": 3408900, // [Relay] Wave Slot Start
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408900, // [Relay] Wave Slot Start
+                            "targetId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408900, // [Relay] Wave Slot Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408900, // [Relay] Wave Slot Start
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408900, // [Relay] Wave Slot Start
+                            "targetId": 3407930, // [Camera] Camera_MoveToRight
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3407930, // [Camera] Camera_MoveToRight
+                            "targetId": 3408901, // [Relay] Wave Slot End
+                            "state": "INACTIVE",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408901, // [Relay] Wave Slot End
+                            "targetId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
+                        },
+                        {
+                            "senderId": 3408901, // [Relay] Wave Slot End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408901, // [Relay] Wave Slot End
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408901, // [Relay] Wave Slot End
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408903, // [Relay] DefaultToRight - Instant Turn
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay
+                            "state": "ZERO",
+                            "message": "RESET_AND_START"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3407994, // [Timer] Timer_MoveBridgeDelayRight
+                            "state": "ZERO",
+                            "message": "STOP_AND_RESET"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408046, // [Timer] Timer_GrindSound
+                            "state": "ZERO",
+                            "message": "STOP_AND_RESET"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408116, // [Timer] TimerBallTriggerReleaseSlot1
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3407917, // [Timer] Grate open timer
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3407919, // [Timer] Grate Close Timer
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408020, // [Sound] grind sound slow
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408022, // [Sound] rumble sound
+                            "state": "ZERO",
+                            "message": "STOP"
+                        },
+                        {
+                            "senderId": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "targetId": 3408904, // [ActorKeyframe] Grate Insta-Close
+                            "state": "ZERO",
+                            "message": "ACTION"
+                        },
+                        {
+                            "senderId": 3408903, // [Relay] DefaultToRight - Instant Turn
+                            "targetId": 3408023, // [Sound] rock stop sound
+                            "state": "ZERO",
+                            "message": "PLAY"
+                        },
+                        {
+                            "senderId": 3408903, // [Relay] DefaultToRight - Instant Turn
+                            "targetId": 3407903, // [ActorRotate] PlatformRotateDefault_To_Right
+                            "state": "ZERO",
+                            "message": "NEXT"
+                        },
+// Ice Slot Cutscene
+                        {
+                            "senderId": 3408000, // [Relay] Relay_BeginMoveBridgeDown
+                            "targetId": 3408917, // [Relay] Ice Slot Start
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408917, // [Relay] Ice Slot Start
+                            "targetId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
+                        },
+                        {
+                            "senderId": 3408917, // [Relay] Ice Slot Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408917, // [Relay] Ice Slot Start
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "INCREMENT"
+                        },
+                        {
+                            "senderId": 3408917, // [Relay] Ice Slot Start
+                            "targetId": 3407924, // [Camera] Camera_MoveToDown
                             "state": "ZERO",
                             "message": "ACTIVATE"
                         },
                         {
                             "senderId": 3407924, // [Camera] Camera_MoveToDown
-                            "targetId": 4408051, // [Timer] Reactivate Instant Rotators
+                            "targetId": 3408918, // [Relay] Ice Slot End
                             "state": "INACTIVE",
-                            "message": "RESET_AND_START"
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "senderId": 3407930, // [Camera] Camera_MoveToRight
-                            "targetId": 4408051, // [Timer] Reactivate Instant Rotators
-                            "state": "INACTIVE",
-                            "message": "RESET_AND_START"
+                            "senderId": 3408918, // [Relay] Ice Slot End
+                            "targetId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "DEACTIVATE"
                         },
                         {
-                            "senderId": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "targetId": 4408051, // [Timer] Reactivate Instant Rotators
+                            "senderId": 3408918, // [Relay] Ice Slot End
+                            "targetId": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408918, // [Relay] Ice Slot End
+                            "targetId": 3407925, // [CameraFilterKeyFrame] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "DECREMENT"
+                        },
+                        {
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408918, // [Relay] Ice Slot End
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408907, // [Relay] DefaultToDown - Instant Turn
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+                        {
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay
                             "state": "ZERO",
                             "message": "RESET_AND_START"
                         },
                         {
-                            "senderId": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "targetId": 4408051, // [Timer] Reactivate Instant Rotators
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3407999, // [Timer] Timer_MoveBridgeDelayDown
                             "state": "ZERO",
-                            "message": "RESET_AND_START"
-                        }
-                    ],
-                    "actorKeyframes": [
-                        {
-                            "id": 3408028, // [ActorKeyframe] Reset Chozo Statue
-                            "name": "Reset Chozo Statue"
-                        }
-                    ],
-                    "relays": [
-                        {
-                            "id": 3407965, // [Relay] Overlapping Cutscenes Activator (Master Slot)
-                            "name": "Overlapping Cutscenes Activator (Master Slot)",
-                            "active": false
+                            "message": "STOP_AND_RESET"
                         },
                         {
-                            "id": 3407997, // [Relay] Overlapping Cutscenes Activator (Wave Slot)
-                            "name": "Overlapping Cutscenes Activator (Wave Slot)",
-                            "active": false
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408046, // [Timer] Timer_GrindSound
+                            "state": "ZERO",
+                            "message": "STOP_AND_RESET"
                         },
                         {
-                            "id": 3407955, // [Relay] Overlapping Cutscenes Activator (Ice Slot)
-                            "name": "Overlapping Cutscenes Activator (Ice Slot)",
-                            "active": false
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "state": "ZERO",
+                            "message": "STOP"
                         },
                         {
-                            "id": 3407958, // [Relay] Overlapping Cutscenes Activator (Plasma Slot)
-                            "name": "Overlapping Cutscenes Activator (Plasma Slot)",
-                            "active": false
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408120, // [Timer] TimerBallTriggerReleaseSlot2
+                            "state": "ZERO",
+                            "message": "STOP"
                         },
                         {
-                            "id": 3408005, // [Relay] Wave Slot Cutscenes
-                            "name": "Wave Slot Cutscenes",
-                            "active": false
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3407917, // [Timer] Grate open timer
+                            "state": "ZERO",
+                            "message": "STOP"
                         },
                         {
-                            "id": 3408003, // [Relay] Ice Slot Cutscenes
-                            "name": "Ice Slot Cutscenes",
-                            "active": false
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3407919, // [Timer] Grate Close Timer
+                            "state": "ZERO",
+                            "message": "STOP"
                         },
                         {
-                            "id": 3408011, // [Relay] Prevent Cutscenes Relay
-                            "name": "Prevent Cutscenes Relay",
-                            "active": false
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408020, // [Sound] grind sound slow
+                            "state": "ZERO",
+                            "message": "STOP"
                         },
                         {
-                            "id": 3407915, // [Relay] Start of Master Slot Cinema
-                            "name": "Start of Master Slot Cinema"
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408022, // [Sound] rumble sound
+                            "state": "ZERO",
+                            "message": "STOP"
                         },
                         {
-                            "id": 4407962, // [Relay] Default Rotation Cutscene Checker (DownToDefault)
-                            "name": "Default Rotation Cutscene Checker (DownToDefault)"
+                            "senderId": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "targetId": 3408904, // [ActorKeyframe] Grate Insta-Close
+                            "state": "ZERO",
+                            "message": "ACTION"
                         },
                         {
-                            "id": 3407991, // [Relay] Default Rotation Cutscene Checker (RightToDefault)
-                            "name": "Default Rotation Cutscene Checker (RightToDefault)"
+                            "senderId": 3408907, // [Relay] DefaultToDown - Instant Turn
+                            "targetId": 3408023, // [Sound] rock stop sound
+                            "state": "ZERO",
+                            "message": "PLAY"
                         },
                         {
-                            "id": 3407984, // [Relay] DownBowl Cinema Start
-                            "name": "DownBowl Cinema Start"
+                            "senderId": 3408907, // [Relay] DefaultToDown - Instant Turn
+                            "targetId": 3407910, // [ActorRotate] PlatformRotateDefault_To_Down
+                            "state": "ZERO",
+                            "message": "NEXT"
+                        },
+// Wave Throw Cutscene
+                        {
+                            "senderId": 3408277, // [Timer] Timer Right Delay
+                            "targetId": 3408909, // [Relay] Bridge Reset Start
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
+                        },
+// Return from Down Cutscene
+                        {
+                            "senderId": 3408104, // [Trigger] Trigger_BackUpLaunch1
+                            "targetId": 3408913, // [Relay] Down Return Start
+                            "state": "ENTERED",
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "id": 3408008, // [Relay] DownBowl Cinema End
-                            "name": "DownBowl Cinema End"
+                            "senderId": 3408913, // [Relay] Down Return Start
+                            "targetId": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "id": 3408006, // [Relay] RightBowl Cinema Start
-                            "name": "RightBowl Cinema Start"
+                            "senderId": 3408913, // [Relay] Down Return Start
+                            "targetId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
                         },
                         {
-                            "id": 3407980, // [Relay] Bridge Cinema End
-                            "name": "Bridge Cinema End"
+                            "senderId": 3408913, // [Relay] Down Return Start
+                            "targetId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
+                            "state": "ZERO",
+                            "message": "ACTIVATE"
                         },
                         {
-                            "id": 3407902, // [Relay] End Chozo Bowler Move
-                            "name": "End Chozo Bowler Move"
+                            "senderId": 3408913, // [Relay] Down Return Start
+                            "targetId": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
+                            "state": "ZERO",
+                            "message": "INCREMENT"
                         },
                         {
-                            "id": 3407916, // [Relay] End of Master Slot Cinema
-                            "name": "End of Master Slot Cinema"
+                            "senderId": 3408106, // [Camera] Cinematic Camera Watch Back from Down
+                            "targetId": 3408914, // [Relay] Down Return End
+                            "state": "INACTIVE",
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "id": 3407996, // [Relay] EndMoveBridgeDown
-                            "name": "EndMoveBridgeDown"
+                            "senderId": 3408914, // [Relay] Down Return End
+                            "targetId": 3408916, // [Switch] Has Player touched Back up Land?
+                            "state": "ZERO",
+                            "message": "SET_TO_ZERO"
                         },
                         {
-                            "id": 3407921, // [Relay] EndMoveBridgeRight
-                            "name": "EndMoveBridgeRight"
+                            "senderId": 3408282, // [Trigger] Trigger Back up Land
+                            "targetId": 3408916, // [Switch] Has Player touched Back up Land?
+                            "state": "ENTERED",
+                            "message": "OPEN"
                         },
                         {
-                            "id": 3407890, // [Relay] Ghost Death Cinematic Start
-                            "name": "Ghost Death Cinematic Start"
-                        },
-                        {
-                            "id": 3407899, // [Relay] Ghost Death Cinematic End
-                            "name": "Ghost Death Cinematic End"
-                        },
-                        {
-                            "id": 3407989, // [Relay] Platform Cutscene Sound Checker
-                            "name": "Platform Cutscene Sound Checker"
-                        },
-                        {
-                            "id": 4407982, // [Relay] Bowler Throw Start
-                            "name": "Bowler Throw Start"
-                        },
-                        {
-                            "id": 4407983, // [Relay] Bowler Throw End
-                            "name": "Bowler Throw End"
-                        },
-                        {
-                            "id": 4408013, // [Relay] Wave Throw Skip
-                            "name": "Wave Throw Skip",
-                            "active": false
-                        },
-                        {
-                            "id": 4407985, // [Relay] Neutral Throw Skip
-                            "name": "Neutral Throw Skip"
-                        },
-                        {
-                            "id": 4408014, // [Relay] Ice Throw Skip
-                            "name": "Ice Throw Skip",
-                            "active": false
-                        }
-                    ],
-                    "spawnPoints": [
-                        {
-                            "id": 4408006,
-                            "position": [
-                                799.513916,
-                                -168.868607,
-                                72.2047958
-                            ],
-                            "rotation": [
-                                0.0,
-                                0.0,
-                                -180.0
-                            ],
-                            "morphed": true
-                        },
-                        {
-                            "id": 5408016,
-                            "position": [
-                                781.551392,
-                                -181.137833,
-                                48.872372
-                            ],
-                            "morphed": true
-                        },
-                        {
-                            "id": 5408017, // [SpawnPoint] Bottom
-                            "name": "Bottom",
-                            "position": [
-                                769.688721,
-                                -158.103622,
-                                30.770697
-                            ],
-                            "rotation": [
-                                0.0,
-                                0.0,
-                                -90.0
-                            ],
-                            "morphed": true
-                        }
-                    ],
-                    "triggers": [
-                        {
-                            "id": 5408029, // [Trigger] Yeet Wave
-                            "name": "Yeet Wave",
-                            "active": false,
-                            "position": [
-                                781.551392,
-                                -178.115128,
-                                49.386379
-                            ],
-                            "scale": [
-                                2.0,
-                                10.0,
-                                2.0
-                            ],
-                            "force": [
-                                0.0,
-                                300.0,
-                                0.0
-                            ],
-                            "flags": 12288,
-                            "deactivateOnExit": true
-                        },
-                        {
-                            "id": 5408015, // [Trigger] Yeet Neutral
-                            "name": "Yeet Neutral",
-                            "active": false,
-                            "position": [
-                                781.551392,
-                                -178.089447,
-                                49.386379
-                            ],
-                            "scale": [
-                                2.0,
-                                10.0,
-                                2.0
-                            ],
-                            "force": [
-                                0.0,
-                                200.0,
-                                0.0
-                            ],
-                            "flags": 12288,
-                            "deactivateOnExit": true
-                        },
-                        {
-                            "id": 5408025, // [Trigger] Initial Yeet
-                            "name": "Initial Yeet",
-                            "active": false,
-                            "position": [
-                                781.551392,
-                                -182.391357,
-                                49.386379
-                            ],
-                            "scale": [
-                                2.0,
-                                2.0,
-                                2.0
-                            ],
-                            "force": [
-                                0.0,
-                                1000.0,
-                                0.0
-                            ],
-                            "flags": 12288,
-                            "deactivateOnExit": true
-                        },
-                        {
-                            "id": 5408018, // [Trigger] Yeet 2
-                            "name": "Yeet 2",
-                            "active": false,
-                            "position": [
-                                767.663391,
-                                -158.103622,
-                                31.654404
-                            ],
-                            "scale": [
-                                5.0,
-                                2.0,
-                                2.0
-                            ],
-                            "force": [
-                                -300.0,
-                                0.0,
-                                0.0
-                            ],
-                            "flags": 12288,
-                            "deactivateOnExit": true
+                            "senderId": 3408916, // [Switch] Has Player touched Back up Land?
+                            "targetId": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "state": "CLOSED",
+                            "message": "DEACTIVATE"
                         }
                     ],
                     "specialFunctions": [
                         {
-                            "id": 3407878, // [SpecialFunction] SpecialFunction Cinematic Skip (Ghost Death)
-                            "name": "SpecialFunction Cinematic Skip (Ghost Death)",
+                            "id": 3408882, // [SpecialFunction] Main Cinematic Skip Control
+                            "name": "Main Cinematic Skip Control",
                             "type": "CinematicSkip"
+                        }
+                    ],
+                    "switches": [
+                        {
+                            "id": 3408916, // [Switch] Has Player touched Back up Land?
+                            "name": "Has Player touched Back up Land?",
+                            "autoClose": true
+                        }
+                    ],
+                    "relays": [
+                        {
+                            "id": 3408883, // [Relay] Ghost Death - Skip to COMPLETE
+                            "name": "Ghost Death - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 3407914, // [SpecialFunction] SpecialFunction Cinematic Skip (Plasma Slot)
-                            "name": "SpecialFunction Cinematic Skip (Plasma Slot)",
-                            "type": "CinematicSkip"
+                            "id": 3408884, // [Relay] Master Slot Activation - Skip to COMPLETE
+                            "name": "Master Slot Activation - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 4407918, // [SpecialFunction] SpecialFunction Cinematic Skip (Master Slot)
-                            "name": "SpecialFunction Cinematic Skip (Master Slot)",
-                            "type": "CinematicSkip"
+                            "id": 3408885, // [Relay] Wave Slot Activation - Skip to COMPLETE
+                            "name": "Wave Slot Activation - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 3407922, // [SpecialFunction] SpecialFunction Cinematic Skip (Wave Slot)
-                            "name": "SpecialFunction Cinematic Skip (Wave Slot)",
-                            "type": "CinematicSkip"
+                            "id": 3408886, // [Relay] Ice Slot Activation - Skip to COMPLETE
+                            "name": "Ice Slot Activation - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 3407926, // [SpecialFunction] SpecialFunction Cinematic Skip (Ice Slot)
-                            "name": "SpecialFunction Cinematic Skip (Ice Slot)",
-                            "type": "CinematicSkip"
+                            "id": 3408887, // [Relay] Plasma Slot Activation - Skip to COMPLETE
+                            "name": "Plasma Slot Activation - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 3407981, // [SpecialFunction] SpecialFunction Cinematic Skip (Bridge Cinema)
-                            "name": "SpecialFunction Cinematic Skip (Bridge Cinema)",
-                            "type": "CinematicSkip"
+                            "id": 3408888, // [Relay] Bowler Neutral Throw - Skip to COMPLETE
+                            "name": "Bowler Neutral Throw - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 3408007, // [SpecialFunction] SpecialFunction Cinematic Skip (Energy Tank Out)
-                            "name": "SpecialFunction Cinematic Skip (Energy Tank Out)",
-                            "type": "CinematicSkip"
+                            "id": 3408889, // [Relay] Bowler Wave Throw - Skip to COMPLETE
+                            "name": "Bowler Wave Throw - Skip to COMPLETE",
+                            "active": false
                         },
                         {
-                            "id": 4408050, // [SpecialFunction] SpecialFunction Cinematic Skip (Bowler)
-                            "name": "SpecialFunction Cinematic Skip (Bowler)",
-                            "type": "CinematicSkip"
+                            "id": 3408890, // [Relay] Bowler Ice Throw - Skip to COMPLETE
+                            "name": "Bowler Ice Throw - Skip to COMPLETE",
+                            "active": false
+                        },
+                        {
+                            "id": 3408891, // [Relay] Ice Return - Skip to COMPLETE
+                            "name": "Ice Return - Skip to COMPLETE",
+                            "active": false
+                        },
+                        {
+                            "id": 3408895, // [Relay] Cinematic Started - Increment CinematicSkip
+                            "name": "Cinematic Started - Increment CinematicSkip"
+                        },
+                        {
+                            "id": 3408896, // [Relay] Cinematic Complete - Decrement CinematicSkip
+                            "name": "Cinematic Complete - Decrement CinematicSkip"
+                        },
+                        {
+                            "id": 3408893, // [Relay] Ghost Outro Start
+                            "name": "Ghost Outro Start"
+                        },
+                        {
+                            "id": 3408894, // [Relay] Ghost Outro End
+                            "name": "Ghost Outro End"
+                        },
+                        {
+                            "id": 3408898, // [Relay] Master Slot Start
+                            "name": "Master Slot Start"
+                        },
+                        {
+                            "id": 3408899, // [Relay] Master Slot End
+                            "name": "Master Slot End"
+                        },
+                        {
+                            "id": 3408900, // [Relay] Wave Slot Start
+                            "name": "Wave Slot Start"
+                        },
+                        {
+                            "id": 3408901, // [Relay] Wave Slot End
+                            "name": "Wave Slot End"
+                        },
+                        {
+                            "id": 3408917, // [Relay] Ice Slot Start
+                            "name": "Ice Slot Start"
+                        },
+                        {
+                            "id": 3408918, // [Relay] Ice Slot End
+                            "name": "Ice Slot End"
+                        },
+                        {
+                            "id": 3408909, // [Relay] Bridge Reset Start
+                            "name": "Bridge Reset Start"
+                        },
+                        {
+                            "id": 3408910, // [Relay] Bridge Reset End
+                            "name": "Bridge Reset End"
+                        },
+                        {
+                            "id": 3408913, // [Relay] Down Return Start
+                            "name": "Down Return Start"
+                        },
+                        {
+                            "id": 3408914, // [Relay] Down Return End
+                            "name": "Down Return End"
+                        },
+                        {
+                            "id": 3408903, // [Relay] DefaultToRight - Instant Turn
+                            "name": "DefaultToRight - Instant Turn",
+                            "active": false
+                        },
+                        {
+                            "id": 3408906, // [Relay] RightToDefault - Instant Turn
+                            "name": "RightToDefault - Instant Turn",
+                            "active": false
+                        },
+                        {
+                            "id": 3408907, // [Relay] DefaultToDown - Instant Turn
+                            "name": "DefaultToDown - Instant Turn",
+                            "active": false
+                        },
+                        {
+                            "id": 3408908, // [Relay] DownToDefault - Instant Turn
+                            "name": "DownToDefault - Instant Turn",
+                            "active": false
+                        }
+                    ],
+                    "actorKeyframes": [
+                        {
+                            "id": 3408904, // [ActorKeyframe] Grate Insta-Close
+                            "name": "Grate Insta-Close"
                         }
                     ],
                     "timers": [
                         {
-                            "id": 3407975, // [Timer] New Grate Open Timer
-                            "name": "New Grate Open Timer",
-                            "time": 0.1
+                            "id": 3408897, // [Timer] Delay before Decrementing of CinematicSkip
+                            "time": 0.03,
+                            "name": "Delay before Decrementing of CinematicSkip"
                         },
                         {
-                            "id": 3407923, // [Timer] Stop Platform Sounds
-                            "name": "Stop Platform Sounds",
-                            "time": 0.1
+                            "id": 3408902, // [Timer] Bomb Slots Cinematic Skip - Second Delay
+                            "time": 1.0,
+                            "name": "Bomb Slots Cinematic Skip - Second Delay"
                         },
                         {
-                            "id": 3407971, // [Timer] Stop Grate Open Timer
-                            "name": "Stop Grate Open Timer",
-                            "time": 0.001
+                            "id": 3408911, // [Timer] Bridge ToDefault Rotation Complete - Disable Instant Rotators
+                            "time": 6.0,
+                            "name": "Bridge ToDefault Rotation Complete - Disable Instant Rotators"
                         },
                         {
-                            "id": 3408002, // [Timer] Default Rotation Cutscene Timer
-                            "name": "Default Rotation Cutscene Timer",
-                            "time": 1.0
+                            "id": 3408912, // [Timer] Bridge Rotation Complete - Disable Instant Rotators
+                            "time": 9.2,
+                            "name": "Bridge Rotation Complete - Disable Instant Rotators"
+                        }
+                    ],
+                    // Renaming of Cameras
+                    "cameras": [
+                        {
+                            "id": 3408194, // [Camera] Cinematic Camera
+                            "name": "Camera_Ghost Outro"
                         },
                         {
-                            "id": 4408071, // [Timer] Deactivate Rotators
-                            "name": "Deactivate Rotators",
-                            "time": 6.1
+                            "id": 3408261, // [Camera] Cinematic Camera
+                            "name": "Camera_Master Slot"
                         },
                         {
-                            "id": 3408009, // [Timer] DownBowl Reposition
-                            "name": "DownBowl Reposition",
-                            "time": 0.01
+                            "id": 3408290, // [Camera] Cinematic Camera
+                            "name": "Camera_Plasma Slot"
                         },
                         {
-                            "id": 3407998, // [Timer] Advance Default to Down
-                            "name": "Advance Default to Down",
-                            "time": 0.01
+                            "id": 3408106, // [Camera] Cinematic Camera Watch Back from Down
+                            "name": "Camera_WatchBackFromDown"
                         },
                         {
-                            "id": 3407934, // [Timer] Advance Default to Right
-                            "name": "Advance Default to Right",
-                            "time": 0.01
+                            "id": 3408273, // [Camera] Cinematic Camera Watch Bridge Default
+                            "name": "Camera_WatchBridgeDefault"
                         },
                         {
-                            "id": 3407983, // [Timer] Advance Right to Default
-                            "name": "Advance Right to Default",
-                            "time": 0.01
-                        },
+                            "id": 3408280, // [Camera] Cinematic Camera Watch Slot Reset
+                            "name": "Camera_WatchSlotReset"
+                        }
+                    ],
+                    "cameraFilterKeyframes": [
+                        // Edit of Existing
                         {
-                            "id": 3408001, // [Timer] Advance Down to Default
-                            "name": "Advance Down to Default",
-                            "time": 0.01
-                        },
-                        {
-                            "id": 3408010, // [Timer] Prevent Cutscene Timer
-                            "name": "Prevent Cutscene Timer",
-                            "time": 0.1
-                        },
-                        {
-                            "id": 3408012, // [Timer] Stop Chozo Glow
-                            "name": "Stop Chozo Glow",
-                            "time": 3.0
-                        },
-                        {
-                            "id": 4408051, // [Timer] Reactivate Instant Rotators
-                            "name": "Reactivate Instant Rotators",
-                            "time": 0.1
+                            "id": 3407925, // [CameraFilterKeyframe] CameraFilterKeyFrame WideScreenFilter
+                            "fadeInTime": 0.0,
+                            "fadeOutTime": 0.0
                         }
                     ]
                 },
